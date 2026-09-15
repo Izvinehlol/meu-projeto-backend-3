@@ -20,7 +20,7 @@ export class Player {
     // O método "attack" é um método que retorna uma string
     public attack(): string {
         const damage = this.level * 10; // Calcula o dano baseado no nível do jogador
-        return '${this.name} atacou e causou ${damage} de dano!';
+        return `${this.name} atacou e causou ${damage} de dano!`;
     }
 
     // O método "takeDamage" é um método que recebe um número como parâmetro e não retorna nada (void)
@@ -28,9 +28,9 @@ export class Player {
         this.health -= amount; // Reduz a saúde do jogador pelo valor do parâmetro
         if (this.health < 0) {
             this.health = 0; // Garante que a saúde não fique negativa
-            return '${this.name} foi derrotado!';
+            return `${this.name} foi derrotado!`;
         }
 
-        return '${this.name} recebeu ${amount} de dano e agora tem ${this.health} de saúde'
+        return `${this.name} recebeu ${amount} de dano e agora tem ${this.health} de saúde`;
     }
 }

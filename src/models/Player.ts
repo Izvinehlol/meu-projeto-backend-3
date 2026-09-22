@@ -33,4 +33,18 @@ export class Player {
 
         return `${this.name} recebeu ${amount} de dano e agora tem ${this.health} de saúde`;
     }
+    // declarando o metado takeHeal()
+    public takeHealth(healAmount: number): string {
+    this.health += healAmount;
+    if (this.health > 100) {
+        this.health = 100; // Limite de vida em 100
+    }
+    return `${this.name} recuperou ${healAmount} de vida e agora tem ${this.health} de saúde`;
+}
+
+    // declarar o metado levelUp() that aumenta o nível do jogador em 1 e retorna uma mensagem informando o novo nível
+    public upLevel(): string {
+    this.level += 1;
+    return `${this.name} subiu para o nível ${this.level}!`;
+}
 }
